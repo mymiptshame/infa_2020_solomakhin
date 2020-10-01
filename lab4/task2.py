@@ -47,9 +47,6 @@ for i in range(3):
 # привидение
 def ghost(point=(500, 500)):
     circle(screen, (200, 200, 200), point, 50)
-    # polygon(screen, (255, 255, 255), (
-    # [point[0] - 50, point[1]], [point[0] - 100, point[1] + 200], [point[0] + 100, point[1] + 170],
-    # [point[0] + 50, point[1]]))
     # решаем СЛАУ чтобы найти полином описывающий точки приведения и сделать красивые плавные границы
     from_x_to_xy = lambda x, coef: sum([coef[i] * x ** i for i in range(len(coef))])
     # кладем все точки приведения

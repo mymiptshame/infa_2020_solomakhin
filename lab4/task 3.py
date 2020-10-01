@@ -62,9 +62,6 @@ screen.blit(surface_c1, (0, 0))
 
 def ghost(surf, point=(500, 500)):
     circle(surf, (200, 200, 200), point, 50)
-    # polygon(screen, (255, 255, 255), (
-    # [point[0] - 50, point[1]], [point[0] - 100, point[1] + 200], [point[0] + 100, point[1] + 170],
-    # [point[0] + 50, point[1]]))
     # решаем СЛАУ чтобы найти полином описывающий точки приведения и сделать красивые плавные границы
     from_x_to_xy = lambda x, coef: sum([coef[i] * x ** i for i in range(len(coef))])
     # кладем все точки приведения
@@ -119,8 +116,6 @@ draw_ghost(surf_g, (250, 400), 2.3, 130)
 draw_ghost(surf_g, (0, 300), 2.5, 150, True)
 draw_ghost(surf_g, (0, 350), 2.0, 160, True)
 
-
-#ghost(screen)
 
 pygame.display.update()
 clock = pygame.time.Clock()
